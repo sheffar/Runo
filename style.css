@@ -223,8 +223,8 @@ footer{
         padding: 20px 30px;
     }
     .links ul{
-        gap: 50px;
         flex-direction: column;
+        gap: 100px;
         position: absolute;
         background: black;
         color: white;
@@ -235,6 +235,9 @@ footer{
         align-items: end;
         padding: 25px 40px;
 
+    }
+    .links ul li{
+        margin-block: 20px;
     }
     /* humbugger menu */
     .humbugger {

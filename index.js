@@ -2,6 +2,7 @@ let container = document.querySelector(".News_conatiner")
 let bottomcon = document.querySelector(".newsbottom")
 let lastcon = document.querySelector(".Beforefooter")
 let humbugger = document.querySelector(".humbugger")
+let topSection = document.querySelector(".topSection")
 
 
 
@@ -17,22 +18,6 @@ const showMenu = () => {
 
 
 
-// function2()
-let newarr = [1, 2, 3]
-const fun3 = () => {
-    newarr.map(() => {
-        lastcon.innerHTML += `
-        
-        <div class="box">
-                    <img src="landing.jpg" alt="news">
-                    <div class="boxtext">
-                        <p class="boxdate">date</p>
-                        <p class="boxtitle"> This is the title of the news</p>
-                    </div>
-                </div>`
-    })
-}
-fun3()
 
 let newArray = [];
 const apicall = async () => {
@@ -45,6 +30,7 @@ const apicall = async () => {
 
             newArray = [...newArray, ...response.data]
             console.log(newArray);
+            fun3()
             newfun()
             function2()
 
@@ -57,11 +43,22 @@ const apicall = async () => {
 }
 apicall()
 
+const fun3 = () => {
+    newArray.map((el) => {
+        topSection.innerHTML = `
+        
+        <section class="topSection">
+        <img src="${el.img_url}" alt="landing">
+    </section>`
+    })
+}
+
+
 const newfun = () => {
     newArray.map((el, index) => {
         // console.log(el.title);
-        if(index < 8){
-        container.innerHTML += `
+        if (index < 8) {
+            container.innerHTML += `
             <div class="newsbox">
             <div class="newsimg">
                 <img src="${el.img_url}" alt="newsimage">
@@ -81,7 +78,7 @@ const newfun = () => {
 const function2 = () => {
 
     newArray.map((el, index) => {
-        if(index >= 8 && index <= 12){
+        if (index >= 8 && index <= 12) {
             bottomcon.innerHTML += `
             <div class="newsbox">
              <div class="newsimg">
