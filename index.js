@@ -14,6 +14,7 @@ const showMenu = () => {
     humbugger.classList.toggle("activate")
     console.log("yes");
 }
+// alert("yes")
 
 
 
@@ -25,9 +26,12 @@ const apicall = async () => {
 
         const data = await fetch("https://strender.vercel.app/api/posts");
         const response = await data.json()
-        if (response.message === "success") {
-            newArray = [...newArray, response.data]
+        if (response.message === "Success") {
+
+            newArray = [...newArray, ...response.data]
+
             console.log(newArray);
+
             fun3()
             newfun()
             function2()
