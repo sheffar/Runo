@@ -23,12 +23,10 @@ let newArray = [];
 const apicall = async () => {
     try {
 
-        const data = await fetch("https://strender.vercel.app/api/posts")
-
+        const data = await fetch("https://strender.vercel.app/api/posts");
         const response = await data.json()
-        if (response.message === "Success") {
-
-            newArray = [...newArray, ...response.data]
+        if (response.message === "success") {
+            newArray = [...newArray, response.data]
             console.log(newArray);
             fun3()
             newfun()
