@@ -48,11 +48,13 @@ apicall()
 const fun3 = () => {
     newArray.map((el) => {
         topSection.innerHTML = `
-        
-        <section class="topSection">
+        <a href="display.html?image=${encodeURIComponent(el.img_url)}&title=${encodeURIComponent(el.title)}&content=${encodeURIComponent(el.content)}">
+        <section class="topSection"  >
         <img src="${el.img_url}" alt="landing">
+        </a>
     </section>`
     })
+    console.log();
 }
 
 
@@ -61,7 +63,9 @@ const newfun = () => {
         // console.log(el.title);
         if (index < 8) {
             container.innerHTML += `
-            <div class="newsbox">
+            
+            <div class="newsbox"  >
+            <a href="display.html?image=${encodeURIComponent(el.img_url)}&title=${encodeURIComponent(el.title)}&content=${encodeURIComponent(el.content)}">
             <div class="newsimg">
                 <img src="${el.img_url}" alt="newsimage">
             </div>
@@ -70,6 +74,7 @@ const newfun = () => {
             <div class="newdescription">
                 ${el.summary} 
             </div>
+            </a>
         </div>
             `
         }
@@ -82,7 +87,9 @@ const function2 = () => {
     newArray.map((el, index) => {
         if (index >= 8 && index <= 12) {
             bottomcon.innerHTML += `
-            <div class="newsbox">
+            
+            <div class="newsbox" >
+            <a href="display.html?image=${encodeURIComponent(el.img_url)}&title=${encodeURIComponent(el.title)}&content=${encodeURIComponent(el.content)}">
              <div class="newsimg">
                 <img src="${el.img_url}" alt="newsimage">
             </div>
@@ -91,8 +98,14 @@ const function2 = () => {
             <div class="newdescription">
                 ${el.summary}
             </div>
+            </a>
         </div>
         `
         }
     })
 }
+
+// function redirectToNewsDetails(title, content, img_url) {
+//     const url = `display.html?title=${encodeURIComponent(title)}&content=${encodeURIComponent(content)}&image=${encodeURIComponent(img_url)}`;
+//     window.location.href = url;
+// }
