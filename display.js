@@ -21,39 +21,3 @@ function loadNewsDetails() {
 window.onload = loadNewsDetails;
 
 
-// document.addEventListener("DOMContentLoaded", function () {
-//     const params = new URLSearchParams(window.location.search);
-
-
-//     const title = decodeURIComponent(params.get("title"));
-//     const content = decodeURIComponent(params.get("content"));
-//     const image = decodeURIComponent(params.get("img_url"));
-
-//     newobj = {
-//         newstitle: title,
-//         newscontent: content,
-//         newsimage: image
-//     }
-
-//     array = [...array, newobj]
-//     console.log(array);
-//     display()
-
-// })
-
-// const display = () => {
-//     newsdetailscontainer = ''
-//     array.map((el) => {
-//         newsdetailscontainer.innerHTML = `
-//         <div class="here">
-//             <div class="news-image">
-//                 <img src="${el.newsimage}" alt="News Image" id="newsImage">
-//             </div>
-//             <div class="news-content">
-//                 <h1 id="newsTitle">${el.newstitle}</h1>
-//                 <p id="newsDescription">${el.newscontent}</p>
-//             </div>
-//         </div>
-//         `
-//     })
-// }

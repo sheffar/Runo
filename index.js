@@ -14,7 +14,6 @@ const showMenu = () => {
     humbugger.classList.toggle("activate")
     console.log("yes");
 }
-// alert("yes")
 
 
 
@@ -60,7 +59,6 @@ const fun3 = () => {
 
 const newfun = () => {
     newArray.map((el, index) => {
-        // console.log(el.title);
         if (index < 8) {
             container.innerHTML += `
             
@@ -104,8 +102,3 @@ const function2 = () => {
         }
     })
 }
-
-// function redirectToNewsDetails(title, content, img_url) {
-//     const url = `display.html?title=${encodeURIComponent(title)}&content=${encodeURIComponent(content)}&image=${encodeURIComponent(img_url)}`;
-//     window.location.href = url;
-// }
