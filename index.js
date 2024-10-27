@@ -36,6 +36,7 @@ const apicall = async () => {
             function2()
 
         }
+        return 
     } catch (err) {
         console.log(err);
     }
@@ -53,7 +54,6 @@ const fun3 = () => {
         </a>
     </section>`
     })
-    console.log();
 }
 
 

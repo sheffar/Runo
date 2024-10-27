@@ -13,7 +13,7 @@ function loadNewsDetails() {
         document.querySelector('#newsDescription').innerText = content;
         document.querySelector('#newsImage').src = image;
     } else {
-        console.error('Missing news details in URL parameters');
+      return console.error('Missing news details in URL parameters');
     }
 }
 
